@@ -152,6 +152,17 @@ body {
           input:invalid {
             border-color: red;
           }
+
+          input[type="password"]:invalid {
+            margin-bottom: 0;
+          }
+
+          div:has(#pwd:invalid)::after {
+            content: "*Passwords do not match";
+
+            color: red;
+            font-size: 0.8em;
+          }
         }
       }
 
